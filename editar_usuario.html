@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria PetVida - Editar Usuario</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="sidebar">
+    <div class="logo">
+        <img src="img/logo%20vet.png" alt="Logo PetVida">
+        <span class="veterinaria-nombre">Veterinaria <strong>PetVida</strong> - Admin</span>
+    </div>
+    <nav>
+        <ul>
+            <div class="separator"></div>
+            <li><a href="index.html" class="nav-link">Inicio</a></li>
+            <div class="separator"></div>
+            <li><a href="registro_veterinario.html" class="nav-link">Registro Veterinario</a></li>
+            <div class="separator"></div>
+            <li><a href="pacientes.html" class="nav-link">Pacientes</a></li>
+            <div class="separator"></div>
+            <li><a href="usuarios_admin.html" class="nav-link">Usuarios</a></li>
+            <div class="separator"></div>
+            <li><button class="cerrar-sesion cancelar-btn">Cerrar sesión</button></li>
+        </ul>
+    </nav>
+</div>
+<main>
+    <h2>Editar Usuario</h2>
+    <form id="editUserForm">
+        <div class="form-group">
+            <label for="userName">Nombre</label>
+            <input type="text" id="userName" name="userName" value="Nombre">
+        </div>
+        <div class="form-group">
+            <label for="userLastName">Apellido</label>
+            <input type="text" id="userLastName" name="userLastName" value="Apellido">
+        </div>
+        <div class="form-group">
+            <label for="userRun">RUN</label>
+            <input type="text" id="userRun" name="userRun" value="11.111.111-1">
+        </div>
+        <div class="form-group">
+            <label for="userEmail">Correo</label>
+            <input type="email" id="userEmail" name="userEmail" value="usuario@ejemplo.com">
+        </div>
+        <div class="form-group">
+            <label for="userPhone">Teléfono</label>
+            <input type="text" id="userPhone" name="userPhone" value="+56 9 1234 5678">
+        </div>
+        <div class="form-buttons">
+            <a href="usuarios_admin.html" button type="submit" class="save-btn">Guardar</button></a>
+            <a href="usuarios_admin.html" type="button" class="cancel-btn" onclick="window.location.href='usuarios.html'">Cancelar</abutton></a>
+        </div>
+    </form>
+</main>
+<script src="JS/scripts.js"></script>
+</body>
+</html>
