@@ -20,7 +20,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(0,0,0,0.1);
+     background-color: #AECBFA;
 }
 
 .logo {
@@ -97,7 +97,7 @@ main {
     color: #333;
 }
 footer {
-    background-color: rgba(0,0,0,0.1);
+    background-color: #AECBFA;
     position: absolute;
     text-align: center;
     bottom: 0;
