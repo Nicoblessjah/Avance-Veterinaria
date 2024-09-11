@@ -101,5 +101,5 @@ siHoraBtn.onclick=()=>{
         horaRegistrada.classList.remove('visible');
         selectorHoras.classList.remove('mostrar');
         window.location.href ="menu_cliente.html"
-    },2000);
+    },1000);
 }

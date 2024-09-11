@@ -11,6 +11,7 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
+    background-color: #FAFAFA;
 }
 .prueba{
     display: flex;
@@ -21,7 +22,7 @@ body {
 }
 header{
     height: 80px;
-    background-color: rgba(0,0,0,0.1);
+    background-color: #AECBFA;
     padding: 1px 5px;
     display: flex;
     align-items: center;
@@ -182,16 +183,16 @@ footer{
 .contenedor-calendario{
     height:550px;
     width:550px;
-    border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #4285f4;
-
+    color: #4A4A4A;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 .contenedor-calendario .calendario-header{
-    background-color: #4285f4;
+    
+    border-bottom: none;
     width: 500px;
     display: flex;
     align-items: center;
@@ -213,13 +214,14 @@ header .iconos span{
     line-height: 38px;
 }
 header .iconos span:hover{
-    background: #3265b8;
+    background: rgba(0,0,0,0.1);
 
 }
 .calendario{
     padding: 20px;
     width: 500px;
-    background-color: #ffff;
+    background-color: rgba(0,0,0,0.02);
+    
     
 }
 .calendario ul{
@@ -370,14 +372,13 @@ header .iconos span:hover{
 .btn-ace-hora{
     display: flex;
     flex-direction: column;
-    background-color: #FFFFFF;
     width: 200px;
     height: 100px;
     border-radius: 5px;
-    background-color: #3F80FF;
 }
 .btn-ace-hora-titulo{
     color: white;
+    background-color: #3F80FF;
     padding: 25px 30px 10px;
 }
 .btns-hora{
@@ -427,7 +428,7 @@ header .iconos span:hover{
 }
 
 footer {
-    background-color: rgba(0,0,0,0.1);
+    background-color: #AECBFA;
     position: absolute;
     text-align: center;
     bottom: 0;
