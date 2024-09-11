@@ -180,8 +180,8 @@ footer{
 
 /* Calendario */
 .contenedor-calendario{
-    height:500px;
-    width:500px;
+    height:550px;
+    width:550px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -192,7 +192,7 @@ footer{
 }
 .contenedor-calendario .calendario-header{
     background-color: #4285f4;
-    width: 450px;
+    width: 500px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -218,11 +218,12 @@ header .iconos span:hover{
 }
 .calendario{
     padding: 20px;
-    width: 450px;
+    width: 500px;
     background-color: #ffff;
     
 }
 .calendario ul{
+    padding-top: 20px;
     display: flex;
     list-style: none;
     flex-wrap: wrap;
@@ -424,12 +425,7 @@ header .iconos span:hover{
     background-color:#f2f2f2;
     border-radius: 5px;
 }
-.footer-container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
-}
+
 footer {
     background-color: rgba(0,0,0,0.1);
     position: absolute;
@@ -437,4 +433,4 @@ footer {
     bottom: 0;
     width: 100%;
     height: 60px;
-  }
+}
