@@ -100,6 +100,6 @@ siHoraBtn.onclick=()=>{
     setTimeout(()=>{
         horaRegistrada.classList.remove('visible');
         selectorHoras.classList.remove('mostrar');
-        window.location.href ="menu_cliente.html"
+        window.location.href ="inicio_cliente.html"
     },1000);
 }
