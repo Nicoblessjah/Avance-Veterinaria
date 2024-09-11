@@ -225,7 +225,7 @@ footer {
     gap: 10px;
     margin-bottom: 70px;
   }
-  span {
+  .datos{
     font-size: 0.9em;
     font-weight: 700;
   }
