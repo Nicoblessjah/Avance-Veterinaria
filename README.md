@@ -8,12 +8,13 @@ https://www.figma.com/design/ysJz16de4EY2i3ER4qTnRa/Veterinaria-PetVida?node-id=
 -Matias Gutierrez
 
 Matias Gutierrez:
-Login
+-Login
+-Menu
 
 Nicolas Olivero:
-Registro de mascotas
-Registro de veterinarios
+-Registro de mascotas
+-Registro de veterinarios
 
 Nicolas Toledo:
-Calendario y Fechas
-Funcionalidades del administrador
+-Calendario y Fechas
+-Funcionalidades del administrador

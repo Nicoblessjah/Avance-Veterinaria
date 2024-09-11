@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria PetVida - Editar Paciente</title>
+    <link rel="stylesheet" href="css/estilo_pacientes_admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="sidebar">
+    <div class="logo">
+        <img src="img/logo%20vet.png" alt="Logo PetVida">
+        <span class="veterinaria-nombre">Veterinaria <strong>PetVida</strong> - Admin</span>
+    </div>
+    <nav>
+        <ul>
+            <div class="separator"></div>
+            <li><a href="inicio_admin.html" class="nav-link">Inicio</a></li>
+            <div class="separator"></div>
+            <li><a href="registro_veterinario.html" class="nav-link">Registro Veterinario</a></li>
+            <div class="separator"></div>
+            <li><a href="pacientes_admin.html" class="nav-link">Pacientes</a></li>
+            <div class="separator"></div>
+            <li><a href="usuarios_admin.html" class="nav-link">Usuarios</a></li>
+            <div class="separator"></div>
+            <li><button class="cerrar-sesion cancelar-btn">Cerrar sesión</button></li>
+        </ul>
+    </nav>
+</div>
+<main>
+    <h2>Editar Paciente</h2>
+    <form id="editUserForm">
+        <div class="image-upload">
+            <img id="imagePreview" src="img/default-image.png" alt="Imagen del Paciente" class="preview-img">
+            <input type="file" id="userImage" name="userImage" accept="image/*">
+            <button type="button" id="editImageBtn" class="edit-image-btn">Editar Imagen</button>
+        </div>
+        <div class="form-group">
+            <label for="userName">Nombre</label>
+            <input type="text" id="userName" name="userName" value="Nombre">
+        </div>
+        <div class="form-group">
+            <label for="userLastName">Apellido</label>
+            <input type="text" id="userLastName" name="userLastName" value="Apellido">
+        </div>
+        <div class="form-group">
+            <label for="userNacimiento">Fecha de nacimiento</label>
+            <input type="text" id="userNacimiento" name="userNacimiento" value="01 ENE 2024">
+        </div>
+        <div class="form-group">
+            <label for="userEspecie">Especie</label>
+            <input type="text" id="userEspecie" name="userEspecie" value="Especie">
+        </div>
+        <div class="form-group">
+            <label for="userRaza">Raza</label>
+            <input type="text" id="userRaza" name="userRaza" value="Raza">
+        </div>
+        <div class="form-group">
+            <label for="userSexo">Sexo</label>
+            <input type="text" id="userSexo" name="userSexo" value="Sexo">
+        </div>
+        <div class="form-group">
+            <label for="userEstado">Estado</label>
+            <select id="userEstado" name="userEstado">
+                <option value="en_reserva">Hora reservada</option>
+                <option value="en_atencion">En atención</option>
+                <option value="recuperacion">Recuperación</option>
+                <option value="de_alta">De alta</option>
+                <option value="atendido">Atendido</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="userDueño">ID Dueño</label>
+            <input type="text" id="userDueño" name="userDueño" value="1">
+        </div>
+        <div class="form-buttons">
+            <a href="pacientes_admin.html" button type="submit" class="save-btn">Guardar</button></a>
+            <a href="pacientes_admin.html" type="button" class="cancel-btn" onclick="window.location.href='usuarios.html'">Cancelar</a>
+        </div>
+    </form>
+</main>
+<script src="js/editar_usuario.js"></script>
+<script>
+    document.getElementById('editImageBtn').addEventListener('click', function() {
+        document.getElementById('userImage').click();
+    });
+
+    document.getElementById('userImage').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('imagePreview').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
+<script>
+    document.querySelector('.cerrar-sesion').addEventListener('click', function() {
+        window.location.href = 'login.html';
+    });
+</script>
+</body>
+</html>
+

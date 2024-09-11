@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria PetVida - Inicio</title>
+    <link rel="stylesheet" href="css/estilo_inicio_admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="sidebar">
+    <div class="logo">
+        <img src="img/logo%20vet.png" alt="Logo PetVida">
+        <span class="veterinaria-nombre">Veterinaria <strong>PetVida</strong> - Admin</span>
+    </div>
+    <nav>
+        <ul>
+            <div class="separator"></div>
+            <li><a href="inicio_admin.html" class="nav-link">Inicio</a></li>
+            <div class="separator"></div>
+            <li><a href="registro_vet_admin.html" class="nav-link">Registro Veterinario</a></li>
+            <div class="separator"></div>
+            <li><a href="pacientes_admin.html" class="nav-link">Pacientes</a></li>
+            <div class="separator"></div>
+            <li><a href="usuarios_admin.html" class="nav-link">Usuarios</a></li>
+            <div class="separator"></div>
+            <li><button class="cerrar-sesion cancelar-btn">Cerrar sesión</button></li>
+        </ul>
+    </nav>
+</div>
+<main>
+    <h2>Inicio</h2>
+    <div class="dashboard">
+        <div class="summary">
+            <div class="summary-card">
+                <div class="card-icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Veterinarios</h3>
+                    <p>5</p>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="card-icon">
+                    <i class="fas fa-paw"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Pacientes</h3>
+                    <p>150</p>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="card-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Usuarios</h3>
+                    <p>120</p>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="card-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Citas Mañana</h3>
+                    <p>20</p>
+                </div>
+            </div>
+        </div>
+        <div class="appointments-today">
+            <h3>Citas Hoy</h3>
+            <table>
+                <thead>
+                <tr>
+                    <th>Hora</th>
+                    <th>Paciente</th>
+                    <th>Estado</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>10:00 AM</td>
+                    <td>Fido</td>
+                    <td class="estado-pendiente">Pendiente <i class="fas fa-clock"></i></td>
+                </tr>
+                <tr>
+                    <td>11:30 AM</td>
+                    <td>Whiskers</td>
+                    <td class="estado-pendiente">Pendiente <i class="fas fa-clock"></i></td>
+                </tr>
+                <tr>
+                    <td>02:00 PM</td>
+                    <td>Rex</td>
+                    <td class="estado-atendido">Atendido <i class="fas fa-check-circle"></i></td>
+                </tr>
+                <tr>
+                    <td>02:00 PM</td>
+                    <td>Rex</td>
+                    <td class="estado-atendido">Atendido <i class="fas fa-check-circle"></i></td>
+                </tr>
+                <tr>
+                    <td>02:00 PM</td>
+                    <td>Rex</td>
+                    <td class="estado-atendido">Atendido <i class="fas fa-check-circle"></i></td>
+                </tr>
+                <tr>
+                    <td>02:00 PM</td>
+                    <td>Rex</td>
+                    <td class="estado-atendido">Atendido <i class="fas fa-check-circle"></i></td>
+                </tr>
+                <tr>
+                    <td>02:00 PM</td>
+                    <td>Rex</td>
+                    <td class="estado-atendido">Atendido <i class="fas fa-check-circle"></i></td>
+                </tr>
+                <tr>
+                    <td>02:00 PM</td>
+                    <td>Rex</td>
+                    <td class="estado-atendido">Atendido <i class="fas fa-check-circle"></i></td>
+                </tr>
+                <tr>
+                    <td>02:00 PM</td>
+                    <td>Rex</td>
+                    <td class="estado-atendido">Atendido <i class="fas fa-check-circle"></i></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+<script>
+    document.querySelector('.cerrar-sesion').addEventListener('click', function() {
+        window.location.href = 'login.html';
+    });
+</script>
+</body>
+</html>
+
+
+
+
+
