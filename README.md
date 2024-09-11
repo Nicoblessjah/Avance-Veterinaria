@@ -3,18 +3,16 @@
 
 https://www.figma.com/design/ysJz16de4EY2i3ER4qTnRa/Veterinaria-PetVida?node-id=0-1&t=Pvsq3i4VHQaF35yO-1
 
--Nicolás Olivero 
--Nicolás Toledo
--Matias Gutierrez
+-Funcionalidades Nicolás Olivero
+>ver y manejar usuarios y pacientes desde administrador
+>reservación de hora para paciente
 
-Matias Gutierrez:
--Login
--Menu
+-Funcionalidades Matias Gutierrez
+>login (inicio de sesión, registro de nuevos usuarios)
+>ver y editar las mascotas de el cliente 
+>ver y editar perfil de el cliente
 
-Nicolas Olivero:
--Registro de mascotas
--Registro de veterinarios
-
-Nicolas Toledo:
--Calendario y Fechas
--Funcionalidades del administrador
+-Funcionalidades Nicolas Toledo Olivero
+>Ver y manejar calendario de citas del veterinario
+>ver y manejar información de los pacientes del veterinario
+>permitir a los usuarios seleccionar el dia y la hora de su cita a través de un calendario
