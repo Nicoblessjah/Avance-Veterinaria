@@ -1,8 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+.prueba{
+    background-color: rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
 header {
     padding: 1px 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+}
+.barra-iconos{
     border-bottom: 1px solid #e0e0e0;
 }
 
@@ -147,114 +172,248 @@ footer{
     text-indent: 28px;
     width: 100%;
   }
-  .summary {
+
+
+/* Calendario */
+.contenedor-calendario{
+    height:500px;
+    width:500px;
+    border-radius: 5px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+
+}
+.contenedor-calendario .calendario-header{
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 30px 10px;
+}
+header .fecha-actual{
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+header .iconos span{
+    height: 38px;
+    width: 38px;
+    margin: 0 1px;
+    border-radius: 50%;
+    color: #878787;
+    font-size: 1.9rem;
+    cursor: pointer;
+    text-align: center;
+    line-height: 38px;
+}
+header .iconos span:hover{
+    background: #f2f2f2;
+
+}
+.calendario{
+    padding: 20px;
+    width: 450px;
+    background-color: #ffff;
+    border-radius: 5px;
+}
+.calendario ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+    
+}
+.calendario ul li{
+    position: relative;
+    width: calc(100%/7);
+}
+.calendario .semanas{
+    font-weight: 500;
+}
+.calendario .dias{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.calendario .dias li{
+    z-index: 1;
     margin-top: 30px;
 }
+.calendario .dias li::before{
+    position: absolute;
+    content: "";
+    height: 60px;
+    width: 60px;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    z-index:-1;
+    transform: translate(-50%,-50%);
+}
+.dias li:not(.otro-mes):hover::before{
+    background: #C0D5FF;
+}
+.dias li.otro-mes{
+    color: #aaa;
+    cursor: default;
+}
 
-.card {
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 150px;
+/* Selector de hora */
+
+.selector-contenedor{
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
     text-align: center;
-    padding: 20px;
-}
-
-.card-icon {
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #4285f4;
-}
-
-.card-info h3 {
-    font-size: 1.2em;
-    margin: 0;
-    font-weight: bold;
-}
-
-.card-info p {
-    font-size: 1.5em;
-    margin: 5px 0 0;
-    font-weight: bold;
-    color: #333;
-}
-.summary {
+    top: 0;
+    left: 0;
+    height:100vh;
+    width:100vw;
+    opacity: 0;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    
 }
-
-.summary-card {
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    text-align: center;
-    padding: 20px;
-    flex: 1;
-    min-width: 150px;
+.selector-contenedor.mostrar{
+    opacity: 1;
+    pointer-events: visible;
+    z-index: 2;
 }
-
-.card-icon {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: #4285f4;
+.selector-horas{
+    width: 400px;
+    height: 550px;
+    background-color: #ffff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-
-.card-info h3 {
-    font-size: 1.2em;
-    margin: 0;
-    font-weight: bold;
+.selector-horas header{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 32px;
+    
 }
-
-.card-info p {
-    font-size: 1.5em;
-    margin: 5px 0 0;
-    font-weight: bold;
-    color: #333;
+#cerrar-selector{   
+    border-radius: 5px;
+    cursor: pointer;
 }
-
-.appointments-today {
-    width: 800px;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+#cerrar-selector:hover{
+    background-color: #F26062;
 }
-
-.appointments-today h3 {
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table th,
-table td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
-
-table th {
-    background-color: #4285f4;
+.selector-titulo{
+    font-weight: 500;
     color: white;
-    font-weight: bold;
+    height: 38px;
+    width: 320px;
+    border-radius: 5px;
+    background-color: #3F80FF;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.horas{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
+.horas li{
+    cursor: pointer;
+    background-color: #E3EDF3;
+    border-radius: 5px;
+    height: 35px;
+    width: 320px;
+}
+.horas li:hover{
+    background:#C0D5FF ;
+}
+.horas li .hora-ocupada{
+    
+    background-color:#F26062 ;
 }
 
-table td {
-    background-color: #fff;
+
+/* Btns si-no horas */
+
+.btn-ace-hora-contenedor{
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height:100vh;
+    width:100vw;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+.btn-ace-hora-contenedor.mostrar-btns{
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 3;
+}
+.btn-ace-hora{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    width: 200px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: #3F80FF;
+}
+.btn-ace-hora-titulo{
+    color: white;
+    padding: 25px 30px 10px;
+}
+.btns-hora{
+    display: flex;
+    justify-content: space-evenly;
+}
+.btns-hora button{
+    cursor: pointer;
+    border: none;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    height: 100%;
+    width: 50%;
+}
+.si-hora-btn:hover{
+    background-color: #C0D5FF;
+}
+.no-hora-btn:hover{
+    background-color: #F26062;
 }
 
-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
 
+/* hora-registrada*/
+.hora-registrada{
+    position: fixed;
+    text-align: center;
+    background-color: rgba(0,0,0,0.3);
+    top: 0;
+    left: 0;
+    height:100vh;
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.visible{
+    opacity: 1;
+    z-index: 4;
+}
+.hora-registrada p{
+    padding: 20px 20px 20px 20px;
+    background-color:#f2f2f2;
+    border-radius: 5px;
+}
