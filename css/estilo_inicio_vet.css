@@ -124,7 +124,10 @@ body {
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
-
+.cerrar-sesion a{
+    text-decoration: none;
+    color: white;
+}
 .cerrar-sesion:hover {
     background-color: #ff5252;
 }
@@ -244,7 +247,4 @@ table tr:nth-child(even) {
 .estado-atendido i {
     color: #2ecc71;
     margin-left: 5px;
-}
-a{
-    display: none;
 }
