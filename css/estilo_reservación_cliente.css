@@ -12,9 +12,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #e0e0e0;
+    background-color: #AECBFA;
 }
-
+footer {
+    background-color: #AECBFA;
+    position: absolute;
+    text-align: center;
+    bottom: auto;
+    width: 100%;
+    height: 60px;
+}
 .logo {
     display: flex;
     align-items: center;
