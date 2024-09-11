@@ -272,3 +272,7 @@ input, select {
         text-align: left;
     }
 }
+a { /* Elimina el subrayado de todos los enlaces */
+    text-decoration: none;
+    color: inherit;
+}
