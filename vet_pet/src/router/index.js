@@ -21,6 +21,7 @@ import Inicio_Vet from '@/views/Inicio_Vet.vue';
 import Pacientes_vet from '@/views/pacientes_vet.vue';
 import AgendaVet from '@/views/AgendaVet.vue';
 import EditarPacienteVet from '@/views/EditarPacienteVet.vue';
+import AddMascota from '@/views/AddMascota.vue';
 
 
 const routes = [
@@ -46,6 +47,7 @@ const routes = [
     { path: '/PacientesVet', name: 'PacientesVet' , component: Pacientes_vet},
     { path: '/AgendaVet', name: 'AgendaVet' , component: AgendaVet},
     { path: '/EditarPacienteVet/:id', name: 'EditarPacienteVet', component:EditarPacienteVet, props: true},
+    { path: '/AddMascota', name: 'AddMascota', component:AddMascota },
 
 
 ];

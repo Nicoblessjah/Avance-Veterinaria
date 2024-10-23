@@ -60,7 +60,7 @@ const registrarReserva = async () => {
 
 const limpiarFormulario = () => {
   nuevaReserva.value = {
-    clienteid: usuarioLogueado.value.id, // Mantener clienteid
+    clienteid: usuarioLogueado.value.id, 
     pacienteid: null,
     fecha: '',
     hora: '',
@@ -68,7 +68,7 @@ const limpiarFormulario = () => {
 };
 
 onMounted(() => {
-  obtenerUsuarioLogueado(); // Obtener el usuario logueado al montar el componente
+  obtenerUsuarioLogueado(); 
   fetchPacientes();
 });
 </script>
