@@ -92,7 +92,7 @@ export default {
               <div class="form-buttons">
                 <br><br>
    <router-link 
-        to="/CrearMascota" 
+        to="/addMascota" 
         class="create-btn"
     >
         Añadir Mascota
