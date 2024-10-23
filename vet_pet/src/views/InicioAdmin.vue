@@ -1,11 +1,15 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import SideBar from '@/components/SideBarAdmin.vue';
 
 const usuariosCount = ref(0);
 const veterinariosCount = ref(0);
 const pacientesCount = ref(0);
 const citas = ref([]);
+const searchDate = ref('');
+const searchPaciente = ref('');
+const searchDueno = ref('');
+const searchHora = ref('');
 
 async function fetchCounts() {
   try {
@@ -43,6 +47,17 @@ async function fetchCounts() {
     console.error('Error fetching counts:', error);
   }
 }
+
+// Computed property para filtrar las citas
+const filteredCitas = computed(() => {
+  return citas.value.filter(cita => {
+    const matchesFecha = !searchDate.value || cita.fecha.includes(searchDate.value);
+    const matchesPaciente = !searchPaciente.value || cita.paciente.toLowerCase().includes(searchPaciente.value.toLowerCase());
+    const matchesDueno = !searchDueno.value || cita.dueño.toLowerCase().includes(searchDueno.value.toLowerCase());
+    const matchesHora = !searchHora.value || cita.hora.includes(searchHora.value);
+    return matchesFecha && matchesPaciente && matchesDueno && matchesHora;
+  });
+});
 
 onMounted(fetchCounts);
 </script>
@@ -95,6 +110,15 @@ onMounted(fetchCounts);
           </div>
         </div>
       </div>
+
+      <div class="search">
+        <h3>Buscar Citas</h3>
+        <input type="date" v-model="searchDate" placeholder="Buscar por fecha" />
+        <input type="text" v-model="searchPaciente" placeholder="Buscar por paciente" />
+        <input type="text" v-model="searchDueno" placeholder="Buscar por dueño" />
+        <input type="text" v-model="searchHora" placeholder="Buscar por hora" />
+      </div>
+
       <div class="appointments-today">
         <h3>Citas</h3>
         <table>
@@ -108,7 +132,7 @@ onMounted(fetchCounts);
           </tr>
           </thead>
           <tbody>
-          <tr v-for="cita in citas" :key="cita.hora">
+          <tr v-for="cita in filteredCitas" :key="cita.hora">
             <td>{{ cita.hora }}</td>
             <td>{{ cita.fecha }}</td>
             <td>{{ cita.paciente }}</td>
@@ -127,6 +151,19 @@ onMounted(fetchCounts);
 </template>
 
 <style>
+.search {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.search input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
 .summary {
   display: flex;
   justify-content: space-around;
@@ -253,19 +290,17 @@ table tr:nth-child(even) {
 }
 
 .estado-atendido {
-  background-color: #ffffff;
-  color: #333333;
+  background-color: #d4edda;
+  color: #155724;
   border-radius: 5px;
   padding: 5px;
 }
 
-.estado-pendiente i {
-  color: #ffcd16;
-  margin-left: 5px;
+.estado-atendido i {
+  color: #155724;
 }
 
-.estado-atendido i {
-  color: #2ecc71;
-  margin-left: 5px;
+.estado-pendiente i {
+  color: #ffc107;
 }
 </style>

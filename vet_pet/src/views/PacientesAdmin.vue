@@ -1,9 +1,10 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import SideBar from '@/components/SideBarAdmin.vue';
 
 const pacientes = ref([]);
 const usuarios = ref([]);
+const searchQuery = ref(''); // Variable para almacenar la consulta de búsqueda
 
 const obtenerPacientes = async () => {
   try {
@@ -48,6 +49,16 @@ const borrarPaciente = async (id) => {
   }
 };
 
+// Computed para filtrar pacientes según la búsqueda
+const pacientesFiltrados = computed(() => {
+  return pacientes.value.filter(paciente => {
+    const nombre = paciente.nombre.toLowerCase();
+    const especie = paciente.especie.toLowerCase();
+    const query = searchQuery.value.toLowerCase();
+    return nombre.includes(query) || especie.includes(query);
+  });
+});
+
 // cargar pacientes y usuarios al montar el componente
 onMounted(() => {
   obtenerPacientes();
@@ -66,6 +77,13 @@ export default {
   <SideBar />
   <main>
     <h2>Lista de Pacientes</h2>
+    <!-- Campo de búsqueda -->
+    <input
+        type="text"
+        v-model="searchQuery"
+        placeholder="Buscar por nombre o especie"
+        class="search-input"
+    />
     <table class="user-table">
       <thead>
       <tr>
@@ -81,7 +99,7 @@ export default {
       </tr>
       </thead>
       <tbody>
-      <tr v-for="paciente in pacientes" :key="paciente.id">
+      <tr v-for="paciente in pacientesFiltrados" :key="paciente.id">
         <td class="truncate">{{ paciente.id }}</td>
         <td class="truncate">{{ paciente.nombre }}</td>
         <td class="truncate">{{ paciente.fechaNacimiento }}</td>
@@ -135,5 +153,13 @@ export default {
 
 a {
   text-decoration: none;
+}
+
+.search-input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 </style>

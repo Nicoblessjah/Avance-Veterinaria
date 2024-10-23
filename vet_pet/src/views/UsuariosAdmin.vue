@@ -1,8 +1,9 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import SideBar from '@/components/SideBarAdmin.vue';
 
 const usuarios = ref([]);
+const searchQuery = ref('');
 
 const cargarUsuarios = async () => {
   try {
@@ -21,7 +22,6 @@ const borrarUsuario = async (id) => {
       });
 
       if (response.ok) {
-        // actualiza la lista de usuarios después de borrar
         usuarios.value = usuarios.value.filter(usuario => usuario.id !== id);
         alert('Usuario borrado con éxito.');
       } else {
@@ -33,7 +33,15 @@ const borrarUsuario = async (id) => {
   }
 };
 
-// cargar usuarios al montar el componente
+const filteredUsuarios = computed(() => {
+  return usuarios.value.filter(usuario => {
+    const nombre = usuario.nombre.toLowerCase();
+    const apellido = usuario.apellido.toLowerCase();
+    const query = searchQuery.value.toLowerCase();
+    return nombre.includes(query) || apellido.includes(query);
+  });
+});
+
 onMounted(() => {
   cargarUsuarios();
 });
@@ -45,6 +53,14 @@ onMounted(() => {
     <main>
       <div class="table-container">
         <h2 class="table-title">Lista de Usuarios</h2>
+
+        <input
+            type="text"
+            v-model="searchQuery"
+            placeholder="Buscar por nombre o apellido"
+            class="search-input"
+        />
+
         <table class="user-table">
           <thead>
           <tr>
@@ -59,7 +75,7 @@ onMounted(() => {
           </tr>
           </thead>
           <tbody>
-          <tr v-for="usuario in usuarios" :key="usuario.id">
+          <tr v-for="usuario in filteredUsuarios" :key="usuario.id">
             <td class="truncate">{{ usuario.id }}</td>
             <td class="truncate">{{ usuario.nombre }}</td>
             <td class="truncate">{{ usuario.apellido }}</td>
@@ -109,6 +125,14 @@ onMounted(() => {
 
 .delete-btn:hover {
   background-color: #ff5252;
+}
+
+.search-input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 a {
