@@ -37,7 +37,7 @@ const routes = [
     { path: '/', name: 'Login', component: VentLogin },
     { path: '/Nosotros', name: 'Nosotros', component: VentNosotros },
     { path: '/Registrarse', name: 'Registrar', component: RegistrarUsuario },
-    { path: '/EditarMascota', name: 'EditarMascota', component: EditarMascotaCliente },
+    { path: '/EditarMascota/:id', name: 'EditarMascota', component: EditarMascotaCliente, props: true },
     { path: '/EditarPerfil', name: 'EditarPerfil', component: EditarPerfilCliente },
     { path: '/Perfil', name: 'Perfil', component: PerfilCliente },
     { path: '/MascotaCliente', name: 'MascotaCliente', component: MascotaCliente },
