@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca92f49c-6f0a-4096-8c0f-97043f3f80d1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vet_pet/src/views/reservacion_hora_cliente.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vet_pet/src/views/reservacion_hora_cliente.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vet_pet/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/vet_pet/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vet_pet/src/views/EditarPacienteAdmin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vet_pet/src/views/EditarPacienteAdmin.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

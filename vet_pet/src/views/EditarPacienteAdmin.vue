@@ -15,7 +15,7 @@ const paciente = ref({
   raza: '',
   sexo: '',
   estado: '',
-  dueñoId: ''
+  clienteid: ''
 });
 
 onMounted(async () => {
@@ -97,7 +97,7 @@ export default {
       </div>
       <div class="form-group">
         <label for="userDueño">ID Dueño</label>
-        <input type="text" id="userDueño" v-model="paciente.dueñoId" required/>
+        <input type="text" id="userDueño" v-model="paciente.clienteid" required/>
       </div>
       <div class="form-buttons">
         <button type="submit" class="save-btn">Guardar</button>
