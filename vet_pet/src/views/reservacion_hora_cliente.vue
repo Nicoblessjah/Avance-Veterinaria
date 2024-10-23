@@ -109,10 +109,6 @@ onMounted(() => {
       </div>
     </form>
   </main>
-
-  <footer>
-    <p>© Veterinaria PetVida 2024</p>
-  </footer>
 </template>
 
 <script>
