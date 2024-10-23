@@ -2,7 +2,7 @@
   "usuarios": [
     {
       "id": "1",
-      "nombre": "Juan",
+      "nombre": "Juana",
       "apellido": "Antionio",
       "telefono": 912345678,
       "email": "Juan@example.com",

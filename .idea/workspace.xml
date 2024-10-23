@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ca92f49c-6f0a-4096-8c0f-97043f3f80d1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/vet_pet/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vet_pet/src/router/index.js" afterDir="false" />
