@@ -75,43 +75,46 @@ onMounted(() => {
 </script>
 
 <template>
-  <BarraCliente />
-  <main>
-    <h1>Reserva de Atención</h1>
-    <form @submit.prevent="registrarReserva">
-      <div class="form-section">
-        <h2>Selecciona un paciente</h2>
-        <div class="form-group">
-          <label for="paciente">Paciente</label>
-          <select v-model="nuevaReserva.pacienteid" required>
-            <option disabled value="">Selecciona un paciente</option>
-            <option v-for="paciente in pacientes" :key="paciente.id" :value="paciente.id">
-              {{ paciente.nombre }}
-            </option>
-          </select>
-        </div>
+  <div class="container">
+    <BarraCliente />
+    <main>
+      <h1>Reserva de Atención</h1>
+      <form @submit.prevent="registrarReserva">
+        <div class="form-section">
+          <h2>Selecciona un paciente</h2>
+          <div class="form-group">
+            <label for="paciente">Paciente</label>
+            <select v-model="nuevaReserva.pacienteid" required>
+              <option disabled value="">Selecciona un paciente</option>
+              <option v-for="paciente in pacientes" :key="paciente.id" :value="paciente.id">
+                {{ paciente.nombre }}
+              </option>
+            </select>
+          </div>
 
-        <h2>Selecciona Fecha y Hora</h2>
-        <div class="form-fecha">
-          <label for="fecha">Fecha</label>
-          <Datepicker v-model="nuevaReserva.fecha" :format="'yyyy-MM-dd'" />
-        </div>
+          <h2>Selecciona Fecha y Hora</h2>
+          <div class="form-fecha">
+            <label for="fecha">Fecha</label>
+            <Datepicker v-model="nuevaReserva.fecha" :format="'yyyy-MM-dd'" />
+          </div>
 
-        <div class="form-group">
-          <label for="hora">Hora</label>
-          <select v-model="nuevaReserva.hora" required>
-            <option disabled value="">Selecciona una hora</option>
-            <option v-for="hora in horasDisponibles" :key="hora" :value="hora">
-              {{ hora }}
-            </option>
-          </select>
+          <div class="form-group">
+            <label for="hora">Hora</label>
+            <select v-model="nuevaReserva.hora" required>
+              <option disabled value="">Selecciona una hora</option>
+              <option v-for="hora in horasDisponibles" :key="hora" :value="hora">
+                {{ hora }}
+              </option>
+            </select>
+          </div>
+          <button type="submit" class="btn-registrar">Registrar Reserva</button>
         </div>
-        <button type="submit" class="btn-registrar">Registrar Reserva</button>
-      </div>
-    </form>
-  </main>
-  <PiePagina/>
+      </form>
+    </main>
+    <PiePagina />
+  </div>
 </template>
+
 
 <script>
 export default {
@@ -121,6 +124,11 @@ export default {
 
 
 <style scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Hace que el contenedor ocupe al menos toda la altura de la ventana */
+}
 
 
 header {
@@ -133,12 +141,13 @@ header {
 }
 footer {
   background-color: #AECBFA;
-  position: absolute;
+  position: relative; /* Cambiar a relativo o eliminar la propiedad */
   text-align: center;
-  bottom: auto;
   width: 100%;
   height: 60px;
+  margin-top: auto; /* Esto asegura que el footer esté al final */
 }
+
 .logo {
   display: flex;
   align-items: center;
@@ -237,7 +246,7 @@ form {
 
 .form-section {
   margin-bottom: 30px;
-  
+
 }
 
 .form-columns {
