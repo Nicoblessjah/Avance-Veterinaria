@@ -88,11 +88,11 @@ export default {
       <div class="form-group">
         <label for="userEstado">Estado</label>
         <select id="userEstado" v-model="paciente.estado" required>
-          <option value="en_reserva">Hora reservada</option>
-          <option value="en_atencion">En atención</option>
-          <option value="recuperacion">Recuperación</option>
-          <option value="de_alta">De alta</option>
-          <option value="atendido">Atendido</option>
+          <option value="En reserva">Hora reservada</option>
+          <option value="En atencion">En atención</option>
+          <option value="Recuperacion">Recuperación</option>
+          <option value="De alta">De alta</option>
+          <option value="Atendido">Atendido</option>
         </select>
       </div>
       <div class="form-group">

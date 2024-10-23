@@ -66,7 +66,7 @@
       "raza": "Común Europeo",
       "peso": 20,
       "sexo": "Macho",
-      "estado": "De alta",
+      "estado": "Atendido",
       "alergias": "Medicamento c"
     },
     {
@@ -78,7 +78,7 @@
       "raza": "Gato Naranja",
       "peso": 25,
       "sexo": "Hembra",
-      "estado": "en_atencion",
+      "estado": "En atencion",
       "alergias": "Medicamento c",
       "dueñoId": "1"
     }

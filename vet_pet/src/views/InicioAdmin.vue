@@ -5,6 +5,7 @@ import SideBar from '@/components/SideBarAdmin.vue';
 const usuariosCount = ref(0);
 const veterinariosCount = ref(0);
 const pacientesCount = ref(0);
+const citas = ref([]);
 
 async function fetchCounts() {
   try {
@@ -13,23 +14,31 @@ async function fetchCounts() {
     console.log('Usuarios Data:', usuariosData);
 
     usuariosCount.value = usuariosData.length;
-    console.log('Total Usuarios:', usuariosCount.value);
-
     veterinariosCount.value = usuariosData.filter(usuario => usuario.rol === 2).length;
-    console.log('Total Veterinarios:', veterinariosCount.value);
-
     const adminsYClientesCount = usuariosData.filter(usuario => usuario.rol === 1 || usuario.rol === 3).length;
-
     usuariosCount.value += adminsYClientesCount;
-    console.log('Total Usuarios después de agregar admins y clientes:', usuariosCount.value);
 
     const pacientesResponse = await fetch('http://localhost:3000/pacientes');
     const pacientesData = await pacientesResponse.json();
-    console.log('Pacientes Data:', pacientesData);
-
     pacientesCount.value = pacientesData.length;
-    console.log('Total Pacientes:', pacientesCount.value);
 
+    const citasResponse = await fetch('http://localhost:3000/citas');
+    const citasData = await citasResponse.json();
+    console.log('Citas Data:', citasData);
+
+    citas.value = citasData.map(cita => {
+      const paciente = pacientesData.find(p => p.id == cita.pacienteid);
+      const dueño = usuariosData.find(u => u.id == paciente.clienteid);
+      return {
+        hora: cita.hora,
+        fecha: cita.fecha,
+        paciente: paciente ? paciente.nombre : 'Desconocido',
+        dueño: dueño ? dueño.nombre + ' ' + dueño.apellido : 'Desconocido',
+        estado: paciente ? paciente.estado : 'Pendiente'
+      };
+    });
+
+    console.log('Citas:', citas.value);
   } catch (error) {
     console.error('Error fetching counts:', error);
   }
@@ -44,7 +53,7 @@ onMounted(fetchCounts);
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
   </head>
   <body>
-  <SideBar/>
+  <SideBar />
   <main>
     <h2>Inicio</h2>
     <div class="dashboard">
@@ -81,66 +90,33 @@ onMounted(fetchCounts);
             <i class="fas fa-calendar-check"></i>
           </div>
           <div class="card-info">
-            <h3>Citas Mañana</h3>
-            <p>20</p>
+            <h3>Citas</h3>
+            <p>{{ citas.length }}</p>
           </div>
         </div>
       </div>
       <div class="appointments-today">
-        <h3>Citas Hoy</h3>
+        <h3>Citas</h3>
         <table>
           <thead>
           <tr>
             <th>Hora</th>
+            <th>Fecha</th>
             <th>Paciente</th>
+            <th>Dueño</th>
             <th>Estado</th>
           </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>10:00 AM</td>
-            <td>Fido</td>
-            <td class="estado-pendiente">Pendiente <i class="fas fa-clock"></i></td>
-          </tr>
-          <tr>
-            <td>11:30 AM</td>
-            <td>Whiskers</td>
-            <td class="estado-pendiente">Pendiente <i class="fas fa-clock"></i></td>
-          </tr>
-          <tr>
-            <td>02:00 PM</td>
-            <td>Rex</td>
-            <td class="estado-atendido">Atendido <i class="fas fa-check-circle"></i></td>
-          </tr>
-          <tr>
-            <td>02:00 PM</td>
-            <td>Rex</td>
-            <td class="estado-atendido">Atendido <i class="fas fa-check-circle"></i></td>
-          </tr>
-          <tr>
-            <td>02:00 PM</td>
-            <td>Rex</td>
-            <td class="estado-atendido">Atendido <i class="fas fa-check-circle"></i></td>
-          </tr>
-          <tr>
-            <td>02:00 PM</td>
-            <td>Rex</td>
-            <td class="estado-atendido">Atendido <i class="fas fa-check-circle"></i></td>
-          </tr>
-          <tr>
-            <td>02:00 PM</td>
-            <td>Rex</td>
-            <td class="estado-atendido">Atendido <i class="fas fa-check-circle"></i></td>
-          </tr>
-          <tr>
-            <td>02:00 PM</td>
-            <td>Rex</td>
-            <td class="estado-atendido">Atendido <i class="fas fa-check-circle"></i></td>
-          </tr>
-          <tr>
-            <td>02:00 PM</td>
-            <td>Rex</td>
-            <td class="estado-atendido">Atendido <i class="fas fa-check-circle"></i></td>
+          <tr v-for="cita in citas" :key="cita.hora">
+            <td>{{ cita.hora }}</td>
+            <td>{{ cita.fecha }}</td>
+            <td>{{ cita.paciente }}</td>
+            <td>{{ cita.dueño }}</td>
+            <td :class="cita.estado === 'Atendido' ? 'estado-atendido' : 'estado-pendiente'">
+              {{ cita.estado }}
+              <i :class="cita.estado === 'Atendido' ? 'fas fa-check-circle' : 'fas fa-clock'"></i>
+            </td>
           </tr>
           </tbody>
         </table>
@@ -155,15 +131,6 @@ onMounted(fetchCounts);
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
-}
-
-.card {
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 150px;
-  text-align: center;
-  padding: 20px;
 }
 
 .card-icon {
