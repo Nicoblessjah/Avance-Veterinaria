@@ -107,11 +107,18 @@ body {
     color: #333;
 }
 
+table[data-v-29e5a7c4]{
+    border-collapse: collapse;
+    border: none;
+}
 
 main {
     display:flex;
     align-content: center;
     justify-content: center;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 20px;
 }
 h2 {
     margin-top: 50px;

@@ -130,7 +130,9 @@ main {
     justify-content: center;
     align-items: center;
     height: 80vh;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 20px;
 }
 
 .image-container {
