@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import SideBar from '../../../../E.T TALLER 2/avance_priv/vet_pet/src/components/SideBarAdmin.vue';
+import SideBar from '@/components/SideBarAdmin.vue';
 
 const usuarios = ref([]);
 

@@ -1,7 +1,7 @@
 <template>
     <div class="sidebar">
         <div class="logo">
-            <img src="../../../../E.T%20TALLER%202/avance_priv/vet_pet/src/assets/logo%20vet.png" alt="Logo PetVida">
+            <img src="@/assets/logo%20vet.png" alt="Logo PetVida">
             <span class="veterinaria-nombre">Veterinaria <strong>PetVida</strong> Administrador</span>
         </div>
         <nav>

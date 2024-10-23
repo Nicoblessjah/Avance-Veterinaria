@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import axios from 'axios';
-import SideBar from '../../../../E.T TALLER 2/avance_priv/vet_pet/src/components/SideBarAdmin.vue';
+import SideBar from '@/components/SideBarAdmin.vue';
 
 const nombre = ref('');
 const apellido = ref('');

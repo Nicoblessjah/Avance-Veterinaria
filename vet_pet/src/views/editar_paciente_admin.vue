@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import SideBar from '../../../../E.T TALLER 2/avance_priv/vet_pet/src/components/SideBarAdmin.vue';
+import SideBar from '@/components/SideBarAdmin.vue';
 
 const route = useRoute();
 const router = useRouter();
