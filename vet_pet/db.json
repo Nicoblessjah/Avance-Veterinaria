@@ -66,19 +66,19 @@
       "raza": "Común Europeo",
       "peso": 20,
       "sexo": "Macho",
-      "estado": "De alta",
+      "estado": "Recuperación",
       "alergias": "Medicamento c"
     },
     {
       "id": "2",
-      "clienteid": "2",
+      "clienteid": "1",
       "nombre": "Animal41",
       "fechaNacimiento": "10 FEB 2021",
       "especie": "Felino",
       "raza": "Gato Naranja",
       "peso": 25,
       "sexo": "Hembra",
-      "estado": "en_atencion",
+      "estado": "Atendido",
       "alergias": "Medicamento c",
       "dueñoId": "1"
     }
