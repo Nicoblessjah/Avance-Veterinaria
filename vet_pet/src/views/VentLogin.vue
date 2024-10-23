@@ -9,7 +9,7 @@
           <div class="mensaje">
               <h2>Bienvenido de Vuelta</h2>
           </div>
-          <form @submit.prevent="iniciarSesion" id="loginForm">
+          <form @submit.prevent="iniciarSesion" id="loginForm" class="loginfomrm" >
               <div class="form-group">
                   <label for="email">Correo</label>
                   <input type="email" id="email" v-model="email" required>
@@ -86,6 +86,15 @@ async iniciarSesion() {
 </script>
 
 <style scoped>
+
+.loginfomrm {
+    background-color: #ffffff; /* Fondo blanco */
+    border: none;              /* Sin bordes */
+    box-shadow: none;         /* Sin sombras */
+    margin: 0;                /* Sin márgenes */
+    padding: 0;               /* Sin rellenos */
+}
+
 * {
     margin: 0;
     padding: 0;

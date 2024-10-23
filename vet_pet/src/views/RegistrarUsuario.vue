@@ -117,52 +117,52 @@ const registrarUsuario = async () => {
 
 <template>
     <header>
-        <div class="logo">
-            <img src="@/assets/logo%20vet.png" alt="Logo PetVida">
-            <span class="veterinaria-nombre">Veterinaria <strong>PetVida</strong></span>
+        <div class="header-wrapper">
+            <img src="@/assets/logo%20vet.png" alt="Logo PetVida" class="logo-image">
+            <span class="clinic-title">Veterinaria <strong>PetVida</strong></span>
         </div>
     </header>
 
-    <div class="container">
-        <img :src="require('@/assets/perroregistro.png')" alt="Foto" class="photo">
+    <div class="registration-wrapper">
+        <img :src="require('@/assets/perroregistro.png')" alt="Foto" class="photo-registration">
         <main>
-            <form @submit.prevent="registrarUsuario">
-                <div class="form-section">
+            <form @submit.prevent="registrarUsuario" class="form-registration">
+                <div class="form-container">
                     <h1>Registro</h1>
                     <br>
-                    <div class="form-columns">
-                        <div class="form-column">
-                            <div class="form-group">
+                    <div class="form-layout">
+                        <div class="form-section">
+                            <div class="input-group">
                                 <label for="nombre">Nombre</label>
                                 <input type="text" id="nombre" v-model="nombre" required>
                             </div>
-                            <div class="form-group">
+                            <div class="input-group">
                                 <label for="telefono">Teléfono</label>
                                 <input type="tel" id="telefono" v-model="telefono" required>
                             </div>
-                            <div class="form-group">
+                            <div class="input-group">
                                 <label for="direccion">Dirección</label>
                                 <input type="text" id="direccion" v-model="direccion" required>
                             </div>
-                            <div class="form-group">
+                            <div class="input-group">
                                 <label for="password">Contraseña</label>
                                 <input type="password" placeholder="******" id="password" v-model="password" required>
                             </div>
                         </div>
-                        <div class="form-column">
-                            <div class="form-group">
+                        <div class="form-section">
+                            <div class="input-group">
                                 <label for="apellido">Apellido</label>
                                 <input type="text" id="apellido" v-model="apellido" required>
                             </div>
-                            <div class="form-group">
+                            <div class="input-group">
                                 <label for="correo">Email</label>
                                 <input type="email" id="correo" v-model="email" required>
                             </div>
-                            <div class="form-group">
+                            <div class="input-group">
                                 <label for="run">RUN</label>
                                 <input type="text" id="run" v-model="run" required>
                             </div>
-                            <div class="form-group">
+                            <div class="input-group">
                                 <label for="confirmPassword">Confirmar Contraseña</label>
                                 <input type="password" placeholder="******" id="confirmPassword" v-model="confirmPassword" required>
                             </div>
@@ -171,15 +171,15 @@ const registrarUsuario = async () => {
                 </div>
 
                 <!-- Errores -->
-                <div v-if="errores.length" class="errores">
+                <div v-if="errores.length" class="error-list">
                     <ul>
                         <li v-for="(error, index) in errores" :key="index" style="color:red;">{{ error }}</li>
                     </ul>
                 </div>
 
-                <button type="submit" class="submit-btn">Crear Cuenta</button>
+                <button type="submit" class="submit-button">Crear Cuenta</button>
                 <br><br>
-                <div class="registrar-enlace">
+                <div class="login-prompt">
                     ¿Ya tienes cuenta? <router-link to="/">Ingresa Aquí</router-link>
                 </div>
             </form>
@@ -195,9 +195,18 @@ const registrarUsuario = async () => {
     box-sizing: border-box;
 }
 
-.errores {
+form[data-v-698ee93b] {
+    border: none; 
+    box-shadow: none; 
+    margin: 0; 
+    padding: 0;
+    margin-left: 80px;
+    height: 500px;
+}
+
+
+.error-list {
     color: red;
- 
 }
 
 header {
@@ -209,34 +218,35 @@ header {
     background-color: #AECBFA;
 }
 
-.logo {
+.header-wrapper {
     display: flex;
     align-items: center;
 }
 
-.logo img {
+.logo-image {
     width: 40px;
     height: 40px;
     margin-right: 10px;
 }
 
-.veterinaria-nombre {
+.clinic-title {
     font-family: 'Poppins', sans-serif;
     font-size: 1.2em;
     color: #333;
 }
 
-.veterinaria-nombre strong {
+.clinic-title strong {
     color: #4285f4;
 }
-.container {
+
+.registration-wrapper {
     display: flex;
     height: 80vh;
     align-items: center; 
     justify-content: center; 
 }
 
-.photo {
+.photo-registration {
     position: relative;
     width: 20%;
     height: 500px;
@@ -245,7 +255,7 @@ header {
     border-radius: 10px; 
 }
 
-main {
+.form-registration {
     font-family: 'Poppins', sans-serif;
     flex: 1; 
     max-width: 1000px;
@@ -258,27 +268,24 @@ h1 {
     margin-top: -15px;
 }
 
-form {
+.form-container {
+    margin: 0;
     background-color: #f9f9f9;
     padding: 80px;
     border-radius: 5px;
     height: 500px;
 }
 
-.form-section {
-    margin-bottom: 2px;
-}
-
-.form-columns {
+.form-layout {
     display: flex;
     gap: 60px;
 }
 
-.form-column {
+.form-section {
     flex: 1;
 }
 
-.form-group {
+.input-group {
     margin-bottom: 15px;
     display: flex;
     align-items: center;
@@ -300,7 +307,7 @@ input, select {
     font-family: 'Poppins', sans-serif;
 }
 
-.submit-btn {
+.submit-button {
     background-color: #4285f4;
     color: white;
     border: none;
@@ -313,26 +320,29 @@ input, select {
     font-weight: bold;
     transition: background-color 0.3s ease;
     font-family: 'Poppins', sans-serif;
+    margin-top: -125px;
 }
 
-.submit-btn:hover {
+.submit-button:hover {
     background-color: #3367d6;
 }
-.registrar-enlace {
+
+.login-prompt {
     text-align: center;
     font-size: 1em;
     color: #333;
 }
 
-.registrar-enlace a {
+.login-prompt a {
     color: #4285f4;
     text-decoration: none; 
     font-weight: bold;
 }
 
-.registrar-enlace a:hover {
+.login-prompt a:hover {
     text-decoration: underline; 
 }
+
 footer {
     background-color: #AECBFA;
     position: absolute;
