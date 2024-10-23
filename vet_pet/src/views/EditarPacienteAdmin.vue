@@ -5,7 +5,7 @@ import SideBar from '@/components/SideBarAdmin.vue';
 
 const route = useRoute();
 const router = useRouter();
-const idPaciente = route.query.id; // Obtener el ID del paciente
+const idPaciente = route.query.id; // obtener el ID del paciente
 
 const paciente = ref({
   id: '',
@@ -32,7 +32,6 @@ onMounted(async () => {
   }
 });
 
-// Función para guardar los cambios
 const guardarCambios = async () => {
   try {
     const response = await fetch(`http://localhost:3000/pacientes/${idPaciente}`, {
@@ -201,7 +200,7 @@ h2 {
     text-align: center;
   }
 }
-/* Estilos para la página de editar usuario */
+
 form {
   max-width: 600px;
   margin: 0 auto;
@@ -264,7 +263,7 @@ form {
   background-color: #ff5252;
 }
 
-a { /* Elimina el subrayado de todos los enlaces */
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -276,46 +275,6 @@ select {
   border-radius: 5px;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
-}
-
-.image-upload {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  padding: 20px;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  background-color: #f8f9fa;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.preview-img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-#userImage {
-  display: none;
-}
-
-.edit-image-btn {
-  background-color: #3bce35;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.edit-image-btn:hover {
-  background-color: #2a9826;
 }
 
 </style>

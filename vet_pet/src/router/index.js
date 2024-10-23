@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import InicioAdmin from '@/views/inicio_admin.vue';
-import RegistroVet from '@/views/registro_vet_admin.vue';
-import PacientedAdmin from '@/views/pacientes_admin.vue';
-import UsuariosAdmin from '@/views/usuarios_admin.vue';
+import InicioAdmin from '@/views/InicioAdmin.vue';
+import RegistroVet from '@/views/RegistroVetAdmin.vue';
+import PacientedAdmin from '@/views/PacientesAdmin.vue';
+import UsuariosAdmin from '@/views/UsuariosAdmin.vue';
 import CerrarSesion from '@/views/VentLogin.vue';
 
 import VentLogin from '@/views/VentLogin.vue';
@@ -13,7 +13,7 @@ import EditarMascotaCliente from '@/views/EditarMascotaCliente.vue';
 import EditarPerfilCliente from '@/views/EditarPerfilCliente.vue';
 import PerfilCliente from '@/views/PerfilCliente.vue';
 import MascotaCliente from '@/views/MascotaCliente.vue';
-import EditarUsuario from '@/views/editar_usuario_admin.vue';
+import EditarUsuario from '@/views/EditarUsuarioAdmin.vue';
 import reservacion_hora_cliente from '@/views/reservacion_hora_cliente.vue';
 
 import Inicio_Vet from '@/views/Inicio_Vet.vue';
