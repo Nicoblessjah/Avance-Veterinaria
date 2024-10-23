@@ -66,7 +66,7 @@ const registrarVeterinario = async () => {
   <SideBar/>
   <main>
     <div class="avatar-container">
-      <img src="../../../../E.T%20TALLER%202/avance_priv/vet_pet/src/assets/avatar.png" alt="Avatar" class="avatar">
+      <img src="@/assets/avatar.png" alt="Avatar" class="avatar">
     </div>
     <h2>Registro Veterinario</h2>
     <form @submit.prevent="registrarVeterinario">

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="77c0ca9f-eeee-4c76-b894-9cd900365b01" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ca92f49c-6f0a-4096-8c0f-97043f3f80d1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/vet_pet/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vet_pet/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vet_pet/src/views/RegistroVetAdmin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vet_pet/src/views/RegistroVetAdmin.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,62 +11,32 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/Features-N.Olivero" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 6
-}</component>
-  <component name="ProjectId" id="2m1h93n6rOfrcM9wDKK5bTItS0I" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2np5yeqxYPAa3Pxd2HyMaMUA92q" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Features-N.Olivero",
-    "ignore.virus.scanning.warn.message": "true",
+    "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/nicol/OneDrive/Documents/GitHub/Taller-2-E.T.1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.1.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\nicol\OneDrive\Documents\GitHub\Avance-Veterinaria\vet_pet\src\assets" />
-      <recent name="C:\Users\nicol\OneDrive\Documents\GitHub\Avance-Veterinaria\vet_pet\src\components" />
-      <recent name="C:\Users\nicol\OneDrive\Documents\GitHub\Avance-Veterinaria\vet_pet\src\views" />
-    </key>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -80,32 +48,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="77c0ca9f-eeee-4c76-b894-9cd900365b01" name="Changes" comment="" />
-      <created>1726249837349</created>
+      <changelist id="ca92f49c-6f0a-4096-8c0f-97043f3f80d1" name="Changes" comment="" />
+      <created>1729657435757</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1726249837349</updated>
-      <workItem from="1726249840035" duration="100000" />
-      <workItem from="1726253458785" duration="262000" />
-      <workItem from="1727195825015" duration="2647000" />
-      <workItem from="1727227094144" duration="9000" />
-      <workItem from="1729622991478" duration="1301000" />
-      <workItem from="1729652451994" duration="8000" />
-      <workItem from="1729652466491" duration="16000" />
-      <workItem from="1729652492699" duration="39000" />
-      <workItem from="1729652547952" duration="116000" />
-      <workItem from="1729652672900" duration="301000" />
-      <workItem from="1729652986576" duration="90000" />
-      <workItem from="1729653084669" duration="311000" />
-      <workItem from="1729656420984" duration="22000" />
-      <workItem from="1729656451164" duration="92000" />
+      <updated>1729657435757</updated>
+      <workItem from="1729657437396" duration="226000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
