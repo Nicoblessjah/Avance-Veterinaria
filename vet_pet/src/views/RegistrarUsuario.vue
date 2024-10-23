@@ -88,7 +88,7 @@ const registrarUsuario = async () => {
   const conteoUsuarios = await fetchCounts();
   
   const nuevoUsuario = {
-    id: conteoUsuarios ? conteoUsuarios.totalUsuarios + 1 : 1,
+    id: `${conteoUsuarios ? conteoUsuarios.totalUsuarios + 1 : 1}`,
     nombre: nombre.value,
     apellido: apellido.value,
     telefono: telefono.value,
