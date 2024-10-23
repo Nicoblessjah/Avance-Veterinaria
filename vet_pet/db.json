@@ -1,0 +1,108 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "Juan",
+      "Apellido": "Antionio",
+      "telefono": 912345678,
+      "email": "Juan@example.com",
+      "direccion": "micasa",
+      "run": "00000000-0",
+      "contrasena": "Juan",
+      "rol": 1
+    },
+    {
+      "id": "2",
+      "nombre": "veterinario",
+      "Apellido": "veterinario",
+      "telefono": 912345678,
+      "email": "veterinario@example.com",
+      "direccion": "veterinario",
+      "run": "00000000-0",
+      "contrasena": "veterinario",
+      "rol": 2
+    },
+    {
+      "id": "3",
+      "nombre": "veterinario",
+      "Apellido": "veterinario",
+      "telefono": 912345678,
+      "email": "vetasdaerinario@example.com",
+      "direccion": "veterinario",
+      "run": "00000000-0",
+      "contrasena": "veterinario",
+      "rol": 2
+    },
+    {
+      "id": "4",
+      "nombre": "admin",
+      "Apellido": "admin",
+      "telefono": 999999999,
+      "email": "admin@example.com",
+      "direccion": "admin",
+      "run": "00000000-0",
+      "contrasena": "admin",
+      "rol": 3
+    },
+    {
+      "id": "5",
+      "nombre": "VetNuevo",
+      "Apellido": "Prueba",
+      "telefono": "123456789",
+      "email": "vetnuevoprueba@prueba.com",
+      "direccion": "LaU",
+      "run": "204129843",
+      "contrasena": "vetprueba",
+      "rol": 1
+    }
+  ],
+  "pacientes": [
+    {
+      "id": "1",
+      "clienteid": "1",
+      "nombre": "gato12qweqweqwe",
+      "fechaNacimiento": "10 FEB 2020",
+      "especie": "Felino",
+      "raza": "Común Europeo",
+      "peso": 20,
+      "sexo": "Macho",
+      "estado": "De alta",
+      "alergias": "Medicamento c"
+    },
+    {
+      "id": "2",
+      "clienteid": "2",
+      "nombre": "Animal4",
+      "fechaNacimiento": "10 FEB 2021",
+      "especie": "Felino",
+      "raza": "Gato Naranja",
+      "peso": 25,
+      "sexo": "Hembra",
+      "estado": "En atención",
+      "alergias": "Medicamento c"
+    }
+  ],
+  "citas": [
+    {
+      "id": "1",
+      "clienteid": 1,
+      "pacienteid": 2,
+      "hora": "10:00",
+      "fecha": "18 SEP 2024"
+    },
+    {
+      "id": "0ab4",
+      "clienteid": 1,
+      "pacienteid": "1",
+      "fecha": "2024-10-25T00:29:00.000Z",
+      "hora": "14:00"
+    },
+    {
+      "id": "bf5a",
+      "clienteid": "1",
+      "pacienteid": "1",
+      "fecha": "2024-10-25T02:07:00.000Z",
+      "hora": "10:00"
+    }
+  ]
+}
