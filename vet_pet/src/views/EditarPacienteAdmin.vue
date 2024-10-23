@@ -5,7 +5,7 @@ import SideBar from '@/components/SideBarAdmin.vue';
 
 const route = useRoute();
 const router = useRouter();
-const idPaciente = route.query.id; // obtener el ID del paciente
+const idPaciente = route.query.id;
 
 const paciente = ref({
   id: '',
@@ -18,7 +18,6 @@ const paciente = ref({
   dueñoId: ''
 });
 
-// Cargar los datos del paciente
 onMounted(async () => {
   try {
     const response = await fetch('http://localhost:3000/pacientes');
@@ -43,7 +42,7 @@ const guardarCambios = async () => {
     });
 
     if (response.ok) {
-      router.push('/pacientes_admin.html');
+      router.push('/pacientes');
     } else {
       console.error('Error al guardar los cambios:', response.statusText);
     }
@@ -53,6 +52,7 @@ const guardarCambios = async () => {
 };
 </script>
 
+
 <script>
 export default {
   name: 'EditarPaciente',
@@ -61,29 +61,29 @@ export default {
 
 <template>
   <body>
-  <SideBar />
+  <SideBar/>
   <main>
     <h2>Editar Paciente</h2>
     <form id="editPatientForm" @submit.prevent="guardarCambios">
       <div class="form-group">
         <label for="userName">Nombre</label>
-        <input type="text" id="userName" v-model="paciente.nombre" required />
+        <input type="text" id="userName" v-model="paciente.nombre" required/>
       </div>
       <div class="form-group">
         <label for="userNacimiento">Fecha de nacimiento</label>
-        <input type="text" id="userNacimiento" v-model="paciente.fechaNacimiento" required />
+        <input type="text" id="userNacimiento" v-model="paciente.fechaNacimiento" required/>
       </div>
       <div class="form-group">
         <label for="userEspecie">Especie</label>
-        <input type="text" id="userEspecie" v-model="paciente.especie" required />
+        <input type="text" id="userEspecie" v-model="paciente.especie" required/>
       </div>
       <div class="form-group">
         <label for="userRaza">Raza</label>
-        <input type="text" id="userRaza" v-model="paciente.raza" required />
+        <input type="text" id="userRaza" v-model="paciente.raza" required/>
       </div>
       <div class="form-group">
         <label for="userSexo">Sexo</label>
-        <input type="text" id="userSexo" v-model="paciente.sexo" required />
+        <input type="text" id="userSexo" v-model="paciente.sexo" required/>
       </div>
       <div class="form-group">
         <label for="userEstado">Estado</label>
@@ -97,10 +97,10 @@ export default {
       </div>
       <div class="form-group">
         <label for="userDueño">ID Dueño</label>
-        <input type="text" id="userDueño" v-model="paciente.dueñoId" required />
+        <input type="text" id="userDueño" v-model="paciente.dueñoId" required/>
       </div>
       <div class="form-buttons">
-        <router-link :to="{ path: '/pacientes'}" class="save-btn">Guardar</router-link>
+        <button type="submit" class="save-btn">Guardar</button>
         <router-link :to="{ path: '/pacientes'}" class="cancel-btn">Cancelar</router-link>
       </div>
     </form>
@@ -276,5 +276,4 @@ select {
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
-
 </style>
