@@ -1,5 +1,6 @@
 <script setup>
 import BarraCliente from '@/components/BarraCliente.vue';
+import PiePagina from '@/components/PiePagina.vue';
 import { ref, onMounted,computed } from 'vue';
 import axios from 'axios';
 import Datepicker from '@vuepic/vue-datepicker'; 
@@ -109,6 +110,7 @@ onMounted(() => {
       </div>
     </form>
   </main>
+  <PiePagina/>
 </template>
 
 <script>
