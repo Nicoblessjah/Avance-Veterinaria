@@ -19,6 +19,7 @@ const usuario = ref({
 // cargar los datos del usuario desde db.json
 onMounted(async () => {
   try {
+    console.log("User ID:", userId); // Verificar que userId tiene un valor
     const response = await fetch('http://localhost:3000/usuarios');
     const usuarios = await response.json();
     const usuarioEncontrado = usuarios.find(user => user.id === userId);
@@ -42,7 +43,7 @@ const guardarCambios = async () => {
 
     if (response.ok) {
       // redirigir a la lista de usuarios después de guardar
-      router.push('/usuarios_admin.html');
+      router.push('/usuarios'); // Asegúrate de que esta ruta es correcta
     } else {
       console.error('Error al guardar los cambios:', response.statusText);
     }
@@ -51,6 +52,7 @@ const guardarCambios = async () => {
   }
 };
 </script>
+
 <script>
 export default {
   name: 'EditarUsuario',
@@ -69,7 +71,7 @@ export default {
       </div>
       <div class="form-group">
         <label for="userLastName">Apellido</label>
-        <input type="text" id="userLastName" v-model="usuario.Apellido" required />
+        <input type="text" id="userLastName" v-model="usuario.apellido" required />
       </div>
       <div class="form-group">
         <label for="userRun">RUN</label>
@@ -84,14 +86,13 @@ export default {
         <input type="text" id="userPhone" v-model="usuario.telefono" required />
       </div>
       <div class="form-buttons">
-        <router-link :to="{ path: '/usuarios'}" class="save-btn">Guardar</router-link>
+        <button type="submit" class="save-btn">Guardar</button>
         <router-link :to="{ path: '/usuarios'}" class="cancel-btn">Cancelar</router-link>
       </div>
     </form>
   </main>
   </body>
 </template>
-
 
 <style scoped>
 body {
