@@ -105,6 +105,11 @@ export default {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+main{
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 20px;
+}
 
 body {
     font-family: 'Inter', sans-serif;
@@ -112,6 +117,7 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
+    
 }
 
 h2 {

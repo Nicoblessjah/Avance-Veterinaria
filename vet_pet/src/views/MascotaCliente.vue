@@ -92,7 +92,7 @@ export default {
               <div class="form-buttons">
                 <br><br>
    <router-link 
-        to="/AddMascota" 
+        to="/CrearMascota" 
         class="create-btn"
     >
         Añadir Mascota
@@ -125,7 +125,8 @@ main {
     display: flex;
     justify-content: center;
     height: 80vh;
-    margin: 0;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 h2 {
@@ -159,7 +160,6 @@ h2 {
 }
 
 .user-table th {
-    background-color: #f8f9fa;
     font-weight: bold;
 }
 
@@ -175,6 +175,7 @@ h2 {
     transition: background-color 0.3s ease;
 }
 .create-btn {
+  margin-top: 30px;
   background-color: rgb(11, 201, 11);
     text-decoration: none;
     padding: 5px 10px;

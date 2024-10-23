@@ -44,7 +44,7 @@ export default {
         <section class="contacto">
             <h1>Contacto</h1>
             <p>Puedes ponerte en contacto con nosotros mediante el siguiente formulario.</p>
-            <form action="#" method="POST">
+            <form action="#" method="POST" class="formulario-contacto">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
     
@@ -76,6 +76,14 @@ export default {
     font-family: 'Poppins', sans-serif;
 }
 
+.formulario-contacto{
+    background-color: #ffffff; /* Fondo blanco */
+    border: none;              /* Sin bordes */
+    box-shadow: none;         /* Sin sombras */
+    margin: 0;                /* Sin márgenes */
+    padding: 0;               
+}
+
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -89,7 +97,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 20px;
 }
 
 h2 {
@@ -98,7 +108,9 @@ h2 {
 }
 
 p {
-    margin: 50px;
+    text-align: justify; /* Justifica el texto */
+    margin: 20px; /* Espaciado alrededor del contenedor */
+    line-height: 1.5;
 }
 
 .link-icon-contacto {

@@ -103,6 +103,9 @@ export default {
 
 main {
     font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 20px;
 }
   h2 {
     font-family: 'Poppins', sans-serif;
