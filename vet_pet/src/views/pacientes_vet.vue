@@ -67,7 +67,7 @@ export default {
     },
     getNombreCliente(clienteid) {
       const usuario = this.usuarios.find((u) => u.id == clienteid);
-      return usuario ? `${usuario.nombre} ${usuario.Apellido}` : "Desconocido";
+      return usuario ? `${usuario.nombre} ${usuario.apellido}` : "Desconocido";
     },
     async eliminarPaciente(id) {
             const confirmar = confirm('¿Estás seguro de que deseas eliminar este paciente?');

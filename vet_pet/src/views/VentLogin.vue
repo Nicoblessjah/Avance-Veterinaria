@@ -65,7 +65,7 @@ async iniciarSesion() {
           this.$router.push('/InicioCliente');
           break;
         case 2:
-          this.$router.push('/InicioVeterinario');
+          this.$router.push('/InicioVet');
           break;
         case 3:
           this.$router.push('/InicioAdmin');
