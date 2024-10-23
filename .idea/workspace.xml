@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca92f49c-6f0a-4096-8c0f-97043f3f80d1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/vet_pet/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vet_pet/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vet_pet/src/views/RegistroVetAdmin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vet_pet/src/views/RegistroVetAdmin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vet_pet/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vet_pet/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +31,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.1.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
@@ -53,7 +56,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729657435757</updated>
-      <workItem from="1729657437396" duration="226000" />
+      <workItem from="1729657437396" duration="534000" />
     </task>
     <servers />
   </component>

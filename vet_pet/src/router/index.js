@@ -4,6 +4,7 @@ import RegistroVet from '@/views/RegistroVetAdmin.vue';
 import PacientedAdmin from '@/views/PacientesAdmin.vue';
 import UsuariosAdmin from '@/views/UsuariosAdmin.vue';
 import CerrarSesion from '@/views/VentLogin.vue';
+import EditarPaciente from '@/views/EditarPacienteAdmin.vue';
 
 import VentLogin from '@/views/VentLogin.vue';
 import VentNosotros from '@/views/VentNosotros.vue'; 
@@ -28,7 +29,8 @@ const routes = [
     { path: '/pacientes', name: 'Pacientes', component: PacientedAdmin },
     { path: '/usuarios', name: 'Usuarios', component: UsuariosAdmin },
     { path: '/cerrar', name: 'Cerrar', component: CerrarSesion },
-    { path: '/editar', name: 'Editar', component: EditarUsuario },
+    { path: '/editarusuario', name: 'EditarUsuario', component: EditarUsuario },
+    { path: '/editarpaciente', name: 'EditarPaciente', component: EditarPaciente },
 
     { path: '/InicioCliente', name: 'InicioCliente', component: InicioCliente },
     { path: '/', name: 'Login', component: VentLogin },

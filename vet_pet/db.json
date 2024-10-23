@@ -3,7 +3,7 @@
     {
       "id": "1",
       "nombre": "Juan",
-      "Apellido": "Antionio",
+      "apellido": "Antionio",
       "telefono": 912345678,
       "email": "Juan@example.com",
       "direccion": "micasa",
@@ -14,7 +14,7 @@
     {
       "id": "2",
       "nombre": "veterinario",
-      "Apellido": "veterinario",
+      "apellido": "veterinario",
       "telefono": 912345678,
       "email": "veterinario@example.com",
       "direccion": "veterinario",
@@ -25,7 +25,7 @@
     {
       "id": "3",
       "nombre": "veterinario",
-      "Apellido": "veterinario",
+      "apellido": "veterinario",
       "telefono": 912345678,
       "email": "vetasdaerinario@example.com",
       "direccion": "veterinario",
@@ -36,7 +36,7 @@
     {
       "id": "4",
       "nombre": "admin",
-      "Apellido": "admin",
+      "apellido": "admin",
       "telefono": 999999999,
       "email": "admin@example.com",
       "direccion": "admin",
@@ -47,7 +47,7 @@
     {
       "id": "5",
       "nombre": "VetNuevo",
-      "Apellido": "Prueba",
+      "apellido": "Prueba",
       "telefono": "123456789",
       "email": "vetnuevoprueba@prueba.com",
       "direccion": "LaU",
@@ -72,14 +72,15 @@
     {
       "id": "2",
       "clienteid": "2",
-      "nombre": "Animal4",
+      "nombre": "Animal41",
       "fechaNacimiento": "10 FEB 2021",
       "especie": "Felino",
       "raza": "Gato Naranja",
       "peso": 25,
       "sexo": "Hembra",
-      "estado": "En atención",
-      "alergias": "Medicamento c"
+      "estado": "en_atencion",
+      "alergias": "Medicamento c",
+      "dueñoId": "1"
     }
   ],
   "citas": [
