@@ -37,7 +37,7 @@ const registrarPacientes = async () => {
 
   const nuevoPacientes = {
     id: `${nuevoID}`,
-    clienteid: usuario.id, 
+    clienteid: `${usuario.id}`,
     nombre: nombre.value,
     fechaNacimiento: fechaNacimiento.value,
     especie: especie.value,
