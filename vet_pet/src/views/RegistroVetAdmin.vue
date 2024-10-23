@@ -16,6 +16,17 @@ const errores = ref([]);
 
 const router = useRouter();
 
+const fetchCounts = async () => {
+  try {
+    const usuariosResponse = await fetch('http://localhost:3000/usuarios');
+    const usuariosData = await usuariosResponse.json();
+    return usuariosData.length; // Devuelve el conteo de usuarios
+  } catch (error) {
+    console.error('Error fetching counts:', error);
+    return 0; // Retorna 0 en caso de error
+  }
+};
+
 const registrarVeterinario = async () => {
   errores.value = [];
 
@@ -36,7 +47,12 @@ const registrarVeterinario = async () => {
     return;
   }
 
+  // Obtener el conteo de usuarios para generar el nuevo ID
+  const conteoUsuarios = await fetchCounts();
+  const nuevoID = conteoUsuarios ? conteoUsuarios + 1 : 1;
+
   const nuevoVeterinario = {
+    id: nuevoID, // Usar el nuevo ID generado
     nombre: nombre.value,
     apellido: apellido.value,
     direccion: direccion.value,
@@ -60,6 +76,7 @@ const registrarVeterinario = async () => {
   }
 };
 </script>
+
 
 <template>
   <body>

@@ -54,6 +54,39 @@
       "run": "204129843",
       "contrasena": "vetprueba",
       "rol": 1
+    },
+    {
+      "id": "462e",
+      "nombre": "123123asd",
+      "apellido": "dasda",
+      "direccion": "francisco salazar",
+      "telefono": "912312312",
+      "email": "asd@gmail.com",
+      "run": "21235221-7",
+      "contrasena": "1234",
+      "rol": 2
+    },
+    {
+      "id": 7,
+      "nombre": "Nicolas",
+      "apellido": "olivero",
+      "telefono": "123456789",
+      "email": "nico@gmail.com",
+      "direccion": "gorostiaga 239",
+      "run": "2122222-7",
+      "contrasena": "1234",
+      "rol": 1
+    },
+    {
+      "id": 8,
+      "nombre": "Nicolas",
+      "apellido": "1123d",
+      "direccion": "francisco salazar",
+      "telefono": "912312312",
+      "email": "nic123123@gmail.com",
+      "run": "2122222-7",
+      "contrasena": "1234",
+      "rol": 2
     }
   ],
   "pacientes": [
